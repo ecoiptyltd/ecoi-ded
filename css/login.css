@@ -1,0 +1,83 @@
+body,
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Manrope', sans-serif;
+}
+
+header {
+    position: static;
+    display: block;
+    z-index: 1;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    
+
+}
+
+.login-form input{
+    margin: 7px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+}
+
+.login-form input:focus{
+    background-color: whitesmoke;
+    border: 1px solid white;
+}
+
+.login-form .button-submit {
+    float: right;
+    margin-top: 0;
+    padding: 3% 15%;
+    color: black;
+    border: none;
+}
+
+.login-form .button-submit:hover {
+    color: black;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid black ;
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+p {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: medium;
+    font-weight: 200;
+}
+
+a:hover {
+    font-size: large;
+    color: black;
+}

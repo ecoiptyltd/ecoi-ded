@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Termite - Monitor Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Actionable Inteligence. Driving Better Management Decision Making - Powered by Geo-i">
+
+    <link href="./css/login.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src='./lib/main.js'></script>
+
+    <!-- Firebase Login UI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+</head>
+
+<body>
+    <header>
+            <h1>Termite</h1>
+            <h2>Actionable Inteligence</h2>
+            <p>Login Section</p>
+    </header>
+    <main>
+        <section class='input'>
+            <article class='login-form'>
+                <input type='email' id='userEmail' name='userEmail' placeholder='Email'><br>
+                <input type='password' id='password' name='password' placeholder='Password'><br><br>
+                <button class='button-submit' onclick='login()'>Submit</button>
+            </article>
+            <p><a href='password-recovery.html'>Forgot Username or Password?</a></p>
+            <p><a href='./index.html'>Back</a></p>
+        </section>
+
+    </main>   
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="./lib/init-firebase.js"></script>
+    <script>initialize()</script>
+
+<!-- <script>
+        let ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+        /* ui.start('#firebaseui-auth-container', {
+             signInOptions: [
+                 firebase.auth.EmailAuthProvider.PROVIDER_ID
+             ],
+             // Other config options...
+         });
+         */
+
+        const uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: './dashboard.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+-->
+
+
+</body>
+
+</html>

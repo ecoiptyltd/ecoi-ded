@@ -1,0 +1,103 @@
+body,
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+p {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: medium;
+    font-weight: 200;
+}
+
+a:hover {
+    font-size: large;
+    color: black;
+}
+
+button {
+    padding: 7px 10px;
+    margin: 0 1%;
+    font-family: 'Manrope', sans-serif;
+    border-radius: 2px;
+    border: 0;
+    background-color: #609FD8;
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: whitesmoke;
+    color: #609FD8;
+    border: 1px solid #609FD8;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    padding: 1% 1%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.nav-links {
+    flex-basis: 70%;
+}
+
+.nav-links ul {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.logo-slogan {
+    flex-basis: 30%;
+}
+
+.logo-slogan h1{
+    margin-top: 0px;
+    padding-top: 0px;
+    
+    
+}
+
+.align_right {
+    text-align: right;
+}
+
+.selected-page {
+    color: #609FD8;
+    font-weight: 600;
+}
+
+.defaultContent {
+    display: block;
+}
+
+.userContent {
+    display: none;
+}
