@@ -1,5 +1,14 @@
+main {
+    background-color: black;
+    padding: 1%;
+}
+
+h3 {
+    color: whitesmoke;
+}
+
 path { 
-    stroke: steelblue;
+    stroke: whitesmoke;
     stroke-width: 2;
     fill: none;
 }
@@ -10,4 +19,8 @@ path {
     stroke: grey;
     stroke-width: 1;
     shape-rendering: crispEdges;
+}
+
+.axisWhite text {
+    fill: whitesmoke;
 }
