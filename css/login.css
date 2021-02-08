@@ -81,3 +81,41 @@ a:hover {
     font-size: large;
     color: black;
 }
+
+#loaderSpinner {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    z-index: 2;
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #39B436;
+    border-bottom: 16px solid #39B436;
+    /* Blue */
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
