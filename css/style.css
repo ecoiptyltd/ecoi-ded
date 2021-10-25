@@ -16,7 +16,17 @@ h1 {
 h2 {
     font-weight: 200;
     font-size: 20px;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 12px;
 }
 
 p {
@@ -98,6 +108,22 @@ button:hover {
     display: block;
 }
 
-.userContent {
+.content-user,
+.content-admin,
+.content-client,
+.content-register-user,
+.content-register-client,
+.content-admin-section,
+.content-admin-client-section,
+.content-default-settings,
+.content-client-edit,
+.content-client-edit-list,
+.content-clients-list,
+.content-client-edit-site,
+.content-user-edit,
+.content-view-client,
+.content-view-site,
+.content-view-doc-table,
+.content-view-pdf-preview {
     display: none;
 }

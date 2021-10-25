@@ -1,0 +1,121 @@
+main {
+    padding: 1%;
+}
+
+.dev-h3 .dev-h4 {
+    color: black;
+}
+
+.xs-text {
+    font-size: 10px;
+}
+
+.s-text {
+    font-size: 12px;
+}
+
+path {
+    stroke: whitesmoke;
+    stroke-width: 2;
+    fill: none;
+}
+
+.development {
+    background-color: whitesmoke;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.register-user {
+    background-color: aliceblue;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.register-client {
+    background-color: aliceblue;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.edit-client-list {
+    background-color: aliceblue;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.edit-client {
+    background-color: honeydew;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.edit-user {
+    background-color: mistyrose;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.clients {
+    background-color: whitesmoke;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 10px;
+    display: none;
+}
+
+.view-client {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    display: none;
+}
+
+.view-site {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    display: none;
+}
+
+.companies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.company img {
+    padding: 3%;
+    max-width: 100%;
+    align-content: space-around;
+}
+
+.company img:hover {
+    background-color: white;
+    border: 0px solid gray;
+    border-radius: 5px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.axisWhite text {
+    fill: whitesmoke;
+}
+
+#newUserFrom-SubmitSpinner {
+    display: none;
+}
