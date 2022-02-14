@@ -3,12 +3,13 @@
 
 <head>
   <title>Eco-i - Actionable Inteligence</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description"
     content="Actionable Inteligence. Driving Better Management Decision Making">
-
-
+    
   <link href="./css/ecoi-ded.css" rel="stylesheet" type="text/css">
+  <link href="./css/map.css" rel="stylesheet" type="text/css">
+  
 
   <link href="./css/input-forms.css" rel="stylesheet" type="text/css">
   <link href="./lib/bootstrap-5.1.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -16,6 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet' />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
@@ -26,13 +30,24 @@
   <meta name="theme-color" content="#ffffff">
 
   <script src='./lib/bootstrap-5.1.0-dist/js/bootstrap.js'></script>
-
+  
   <script src='./lib/view.js'></script>
   <script src='./lib/main.js'></script>
   <script src='./lib/tables.js' defer></script>
   <script src='./lib/default-settings.js' defer></script>
   <script src='./lib/client.js' defer></script>
+  <script src='./lib/map.js' defer></script>
+  <script src='./lib/jquery-3.6.0.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+  <script src='./lib/shp2geojson/shp.js'></script>
+  <script src='./lib/shp2geojson/jszip.js'></script>
+  <script src='./lib/shp2geojson/jszip-utils.js'></script>
+  <script src='./lib/shp2geojson/preprocess.js'></script>
+  <script src='./lib/shp2geojson/preview.js'></script>
 
+  <style>
+    
+  </style>
 </head>
 
 <body>
@@ -368,7 +383,7 @@
           <tbody>
           </tbody>
         </table>
-
+        <hr/>
         <!-- Client Sites Table -->
         <table id='clientSitesTable' class="table table-hover">
           <thead>
@@ -387,13 +402,28 @@
             </tr>
           </tbody>
         </table>
-
+        <hr/>
         <!-- Client Edit Site Table -->
         <div class='content-client-edit-site'>
           <h2>Edit Site</h2>
           <h3 id='editClientSiteName'></h3>
           <p><b>Site UID:</b> <span id='editSiteUID'></span></p>
-
+          <p><b>Location:</b></p>
+          <div id='siteEditMap'></div>
+          <br>
+          <div class='content-user'>
+            <h3><b>Upload New Boundary</b></h3>
+            <p>Projection: <b>WGS84</b></p>
+            <p>Put all files in a zip folder</p>
+            <p class='s-text'><b>THIS WILL OVERRIDE THE PREVIOUS BOUNDARY</b></p>
+            <div class="mb-3">
+              <div class='row'>
+                <input class="form-control col" type="file" id="uploadFileShp">
+                <button id='btnUploadShp' type='button' class='btn btn-outline-success col-2'>Upload</button>
+              </div>
+              <p id='uploadStatusSHP' class='m-2'></p>
+            </div>
+            <hr/>
           <div class='container'>
             <div class='row'>
               <div class='col'>
@@ -477,18 +507,24 @@
         <h2 id='clientCompanyName'></h2>
         <p><b>CID: </b><span id='clientUID'></span></p>
 
-        <!-- Client Sites Table -->
-        <table id='clientViewSitesTable' class="table table-hover">
-          <thead>
-            <tr>
-              <th class='col'>Site ID</th>
-              <th class='col'>Name</th>
-              <th class='col-2'></th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+            <!-- Client Sites Table -->
+            <table id='clientViewSitesTable' class="table table-hover">
+              <thead>
+                <tr>
+                  <th class='col'>Site ID</th>
+                  <th class='col'>Name</th>
+                  <th class='col-2'></th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>    
+          
+            <br>
+            <div id='clientBackButton'>
+              <button type='button' class='btn btn-outline-dark' onclick='viewClientsSection()'>Back</button>
+            </div>
+
       </section>
 
       <!-- VIEW SITE -->
@@ -520,6 +556,8 @@
             </div>
           </div>
         </nav>
+
+        <div id='siteMap'></div>
 
         <div class='content-view-doc-table content-client'>
           <h2 id='docTypeName' class='' style='margin-top: 1%'></h2>
@@ -554,7 +592,10 @@
             <embed id='pdfPreview' width='100%' height='800px' src=''></embed>
           </div>
         </div>
-        
+        <br>
+        <div id='siteBackButton'>
+          <button type='button' class='btn btn-outline-dark' onclick=''>Back</button>
+        </div>
 
       </section>
 
