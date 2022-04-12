@@ -272,6 +272,7 @@
             <tr>
               <th scope="col">Monitor Types</th>
               <th class="col-1"></th>
+              <th class="col-1"></th>
             </tr>
           </thead>
 
@@ -279,9 +280,33 @@
             <tr>
             <tr>
               <td contenteditable='true' class='text-black-50'>add new...</td>
+              <td></td>
               <td data-bs-toggle='tooltip' data-bs-placement='top' title='Save New Monitor Type'
                 class='col-1 text-center'><a href="javascript:saveRow('monitor_type', 'defaultMonitorTypesTable')"><i
                     class="bi me-2 bi-file-earmark-plus"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Monitor Limits Reference Table -->
+        <table id='defaultMonitorLimitsTable' class="table">
+          <thead>
+            <tr>
+              <th class='col'>Monitor Limits</th>
+              <th class='col'></th>
+              <th class='col'></th>
+              <th class='col'></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable='true' class='text-black-50'>add new name</td>
+              <td contenteditable='true' class='text-black-50'>add new description</td>
+              <td></td>
+              <td data-bs-toggle='tooltip' data-bs-placement='top' title='Save New Monitor Limit'
+                class='col-1 text-center'><a href="javascript:saveRow('monitor_limits', 'defaultMonitorLimitsTable')"><i
+                    class="bi me-2 bi-file-earmark-plus"></i></a></td>
+              
             </tr>
           </tbody>
         </table>
@@ -631,6 +656,50 @@
                     </tr>
                   </thead>
                   <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASSIGN MONITOR TYPE LIMIT MODAL -->
+      <div class="modal fade overflow-auto" id="assignMonitorTypeLimit" tabindex="-1"
+        aria-labelledby="assignMonitorTypeLimit" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="assignMonitorTypeLimit">Assign Limit</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div>
+                <h2 id="monitorTypeLimitTableHeader"></h2>
+                <table id='monitorTypeLimitTable' class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th class='col'>Name</th>
+                      <th class='col'>Description</th>
+                      <th class="col-1"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td contenteditable='true' class='text-black-50'>add new symbol</td>
+                      <td contenteditable='true' class='text-black-50'>add new description</td>
+                      <td data-bs-toggle='tooltip' data-bs-placement='top' title='Assign'
+                        class='col-1 text-center'><a href="javascript:saveRow('monitor_default_element', 'monitorTypeElementsTable', '')"><i
+                            class="bi me-2 bi-file-earmark-plus"></i></a></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
