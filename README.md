@@ -2,6 +2,9 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.11
+* Minor bug fix in EDIT USERS
+
 Version 1.1
 * Upload SHP of siteboundary
 * Display Siteboundary on Map for each site
