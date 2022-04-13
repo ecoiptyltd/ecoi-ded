@@ -2,6 +2,9 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.12
+* Fixed back button in CLIENT VIEW displaying all clients
+
 Version 1.11
 * Minor bug fix in EDIT USERS
 
