@@ -38,7 +38,7 @@
   <script src='./lib/client.js' defer></script>
   <script src='./lib/map.js' defer></script>
   <script src='./lib/jquery-3.6.0.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js'></script>
   <script src='./lib/shp2geojson/shp.js'></script>
   <script src='./lib/shp2geojson/jszip.js'></script>
   <script src='./lib/shp2geojson/jszip-utils.js'></script>
@@ -433,6 +433,12 @@
           <h2>Edit Site</h2>
           <h3 id='editClientSiteName'></h3>
           <p><b>Site UID:</b> <span id='editSiteUID'></span></p>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="realTimeMonitorCheck">
+            <label class="form-check-label" for="realTimeMonitorCheck">Real-Time Monitoring</label>
+            <p><b>Status:</b> <span id='editRealTimeCheck'>Disabled</span></p>
+          </div>
+          <br>
           <p><b>Location:</b></p>
           <div id='siteEditMap'></div>
           <br>
@@ -449,6 +455,20 @@
               <p id='uploadStatusSHP' class='m-2'></p>
             </div>
             <hr/>
+            <div class='content-real-time-monitor'>
+              <h3><b>Upload New Real-Time Monitor Locations</b></h3>
+              <p>FILE TYPE: <b>GeoJSON</b></p>
+              <p class='s-text'><b>THIS WILL OVERRIDE THE PREVIOUS LOCATIONS</b></p>
+              <div class="mb-3">
+                <div class='row'>
+                  <input class="form-control col" type="file" id="uploadRealTimeFileGeoJSON">
+                  <button id='btnUploadRealTimeGeoJSON' type='button' class='btn btn-outline-success col-2'>Upload</button>
+                </div>
+                <p id='uploadStatusRealTimeGeoJSON' class='m-2'></p>
+              </div>
+              <hr/>
+            </div>
+            
           <div class='container'>
             <div class='row'>
               <div class='col'>
@@ -735,6 +755,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="./lib/init-firebase.js"></script>
   <script>
     firebaseCheckUser();
+
   </script>
 
 </body>

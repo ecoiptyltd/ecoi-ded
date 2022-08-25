@@ -6,6 +6,11 @@ html {
     font-family: 'Manrope', sans-serif;
 }
 
+#chartdiv {
+    width: 500px;
+    height: 250px;
+  }
+
 hr {
     margin: 2%;
 }
@@ -128,6 +133,7 @@ button:hover {
 .content-view-client,
 .content-view-site,
 .content-view-doc-table,
-.content-view-pdf-preview {
+.content-view-pdf-preview,
+.content-real-time-monitor {
     display: none;
 }
