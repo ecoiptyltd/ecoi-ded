@@ -2,6 +2,9 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.20
+* PostgresSQL Database implementation
+
 Version 1.12
 * Fixed back button in CLIENT VIEW displaying all clients
 
