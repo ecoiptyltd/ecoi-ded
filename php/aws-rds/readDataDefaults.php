@@ -1,16 +1,25 @@
+<!DOCTYPE html>
 <html>
 <head>
     <?php
     // Note that the PHP program is placed in the head so that it is executed
     // when a HTTP HEAD request is received. This avoids a lot of useless
     // data that is transferred with the body in response to a HTTP GET request.
-    $config = parse_ini_file('../../ini/db.ini');
+    $servername='ecoi-ded.ccqshuqr2yjq.eu-central-1.rds.amazonaws.com';
+    $serverport=5432;
+    $username='ecoiweb';
+    $password='GreenGrassGrows96$&';
+    $defaultsDB='ecoi_ded_defaults';
+    $clientsDB='ecoi_ded_clients';
+    
+    /*$config = parse_ini_file('../../ini/db.ini');
     $servername = $config['servername'];
     $serverport = $config['serverport'];
     // Set the following values to match your own id and database details
     $username = $config['username'];
     $password = $config['password'];
-    $dbname = $config['defaultsDB'];
+    */
+    $dbname = $defaultsDB;
     $tableName = '_01_highlevel_monitor_types';
  
     // Create connection
@@ -24,5 +33,6 @@
     ?>
 </head>
 <body>
+<?php echo "My First PHP site in VSCode."; ?>
 </body>
 </html>
