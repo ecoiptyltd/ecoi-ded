@@ -7,8 +7,8 @@
     // data that is transferred with the body in response to a HTTP GET request.
     $servername='ecoi-ded.ccqshuqr2yjq.eu-central-1.rds.amazonaws.com';
     $serverport=5432;
-    $username='ecoiweb';
-    $password='GreenGrassGrows96$&';
+    $username='postgres';
+    $password='BlueSkyFly36#^';
     $defaultsDB='ecoi_ded_defaults';
     $clientsDB='ecoi_ded_clients';
     
