@@ -30,6 +30,22 @@
      echo '<p>Connection failed</p>';
      die("Connection failed: " . $conn->connect_error);
     }
+
+    // Insert new record into the database
+   $sql = "SELECT * FROM $tableName";
+    
+   $result = $conn->query($sql);
+   echo "<p>$result</p>";
+   
+   /*$db = mysql_select_db("company", $conn); // Selecting Database
+    //MySQL Query to read data
+    $query = mysql_query("select * from employee", $connection);
+    while ($row = mysql_fetch_array($query)) {
+    echo "<b><a href="readphp.php?id={$row['employee_id']}">{$row['employee_name']}</a></b>";
+    echo "<br />";
+    }
+    $query = mysql_query("select * from _01_highlevel_monitor_types", $conn);
+    */
     ?>
 </head>
 <body>
