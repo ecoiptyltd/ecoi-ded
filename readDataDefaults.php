@@ -11,16 +11,31 @@
     $password='BlueSkyFly36#^';
     $defaultsDB='ecoi_ded_defaults';
     $clientsDB='ecoi_ded_clients';
+    $tableName = '_01_highlevel_monitor_types';
     
+    $con = pg_connect("host=$servername dbname=$defaultsDB user=$username password=$password")
+    or die ("Could not connect to server\n"); 
+
+    $query = "SELECT * FROM $tableName"; 
+
+    $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+
+    while ($row = pg_fetch_row($rs)) {
+    echo "$row[0] $row[1] $row[2]\n";
+    }
+
+    pg_close($con); 
+
+
     /*$config = parse_ini_file('../../ini/db.ini');
     $servername = $config['servername'];
     $serverport = $config['serverport'];
     // Set the following values to match your own id and database details
     $username = $config['username'];
     $password = $config['password'];
-    */
+   
     $dbname = $defaultsDB;
-    $tableName = '_01_highlevel_monitor_types';
+    
  
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname, $serverport);
