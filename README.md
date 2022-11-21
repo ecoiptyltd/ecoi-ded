@@ -2,7 +2,12 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.25
+2022-11-21
+* Bug Fix - Client Site, Delete Monitor type now working
+
 Version 1.24
+2022-11-21
 * Update Bootstrap to v5.2.2
 * Update Bootstrap Table to v1.21.1
 
