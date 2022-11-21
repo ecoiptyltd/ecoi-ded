@@ -627,14 +627,8 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                 <button id='btnUploadDoc' type='button' class='btn btn-outline-success col-2'>Upload</button>
               </div>
               <p id='uploadStatusDoc' class='m-2'></p>
-
             </div>
-          </div>
-          <div class='content-client content-view-pdf-preview'>
-            <h3>PDF Preview</h3>
-            <h4><b>Name: </b><span id='pdfPreviewFileName'></span></h4>
-            <embed id='pdfPreview' width='100%' height='800px' src=''></embed>
-          </div>
+          </div>  
         </div>
 
         <div class='content-view-mon-table content-client'>
@@ -682,13 +676,14 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
               <p id='uploadStatusMon' class='m-2'></p>
             </div>
           </div>
-          <div class='content-client content-view-pdf-preview'>
-            <h3>PDF Preview</h3>
-            <h4><b>Name: </b><span id='pdfPreviewFileName'></span></h4>
-            <embed id='pdfPreview' width='100%' height='800px' src=''></embed>
-          </div>
         </div>
-
+        
+        <!-- Preview PDF-->
+        <div class='content-client content-view-pdf-preview'>
+          <h3>PDF Preview</h3>
+          <h4><b>Name: </b><span id='pdfPreviewFileName'></span></h4>
+          <embed id='pdfPreview' width='100%' height='800px' src=''></embed>
+        </div>
         <br>
         <div id='siteBackButton'>
           <button type='button' class='btn btn-outline-dark' onclick=''>Back</button>

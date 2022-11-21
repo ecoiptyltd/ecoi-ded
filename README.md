@@ -2,6 +2,9 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.22
+* Fixed Monitor Documents View and Delete functions
+
 Version 1.21
 * Monitor Documents Upload Capability
 
