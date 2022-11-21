@@ -2,10 +2,16 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.23
+2022-11-21
+* Bug Fix - View Client Sites now display Site UID not Client UID
+
 Version 1.22
+2022-11-21
 * Fixed Monitor Documents View and Delete functions
 
 Version 1.21
+2022-11-18
 * Monitor Documents Upload Capability
 
 Version 1.20
