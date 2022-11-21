@@ -11,7 +11,7 @@
 
 
   <link href="./css/input-forms.css" rel="stylesheet" type="text/css">
-  <link href="./lib/bootstrap-5.1.0-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="./lib/bootstrap-5.2.2-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/sidebars.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">

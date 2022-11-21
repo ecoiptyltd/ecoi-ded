@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.24
+* Update Bootstrap to v5.2.2
+* Update Bootstrap Table to v1.21.1
+
 Version 1.23
 2022-11-21
 * Bug Fix - View Client Sites now display Site UID not Client UID
