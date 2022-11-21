@@ -2,6 +2,9 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.21
+* Monitor Documents Upload Capability
+
 Version 1.20
 * PostgresSQL Database implementation
 

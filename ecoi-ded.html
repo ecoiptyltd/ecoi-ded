@@ -205,6 +205,16 @@
     </div>
 
     <div class='col overflow-auto'>
+      <?php include 'defaultsDBconnect.php'; $result = $resultHighlevelMonitorTypes; $i = 0; while ($i < pg_num_fields($result)) {$fieldName = pg_field_name($result, $i); <td>$fieldName</td>; $i = $i + 1;}</tr>; $i = 0; while ($row = pg_fetch_row($result)) {echo '<tr>'; $count = count($row); $y = 0; while ($y < $count) { $c_row = current($row);
+        echo '<td>' . $c_row . '</td>';
+        next($row);
+        $y = $y + 1;
+    }
+    echo '</tr>';
+    $i = $i + 1;
+}
+pg_free_result($result);
+
 
       <!-- REGISTER USER -->
       <section class='register-user content-register-user'>
@@ -276,8 +286,8 @@
                   </tr>
               </thead>              
               <tbody>
-                
-                <?php include './php/aws-rds/tableHighLevelMonitorTypes.php';?>
+                <tr><td><?php include 'tableHighLevelMonitorTypes.php'</td></tr>
+                <?php <tr><td>PHP is working</td></tr>
                 <!-- 
                   <tr>
                       <td>James</td>
