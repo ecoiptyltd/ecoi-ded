@@ -2,6 +2,11 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.26
+2023-02-06
+* Removed PostgresSQL read from default tables
+* Added AMcharts capability
+
 Version 1.25
 2022-11-21
 * Bug Fix - Client Site, Delete Monitor type now working

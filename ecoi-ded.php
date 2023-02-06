@@ -270,7 +270,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
               </tr>
             </thead>
             <tbody>
-            <?php include './php/aws-rds/GET_highLevelMonitorTypes.php'?>
+            <?php //include './php/aws-rds/GET_highLevelMonitorTypes.php'?>
                 <td></td>
                 <td contenteditable='true' class='text-black-50'>add new...</td>
                 <td data-bs-toggle='tooltip' data-bs-placement='top' title='Save New Monitor Type' class='col-1 text-center'><a href="javascript:addRowSqlDB('defaultHighLevelMonitorTable', 1)"><i class="bi me-2 bi-file-earmark-plus"></i></a></td>
@@ -290,7 +290,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
               </tr>
             </thead>
             <tbody>
-              <?php include './php/aws-rds/GET_monitorTypes.php'?>
+              <?php //include './php/aws-rds/GET_monitorTypes.php'?>
               <tr>
                 <td></td>
                 <td contenteditable='true' class='text-black-50'>add new...</td>
