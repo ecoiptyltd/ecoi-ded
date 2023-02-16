@@ -51,6 +51,9 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/client.js' defer></script>
   <script src='./lib/map.js' defer></script>
   <script src='./lib/postgres-tables.js' defer></script>
+  <script src='./lib/moment-with-locales.js'></script>
+  <script src='./lib/real-time.js'></script>
+  <script src='./lib/charts/line-chart-live.js'></script>
   <script src='./lib/jquery-3.6.0.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js'></script>
   <script src='./lib/shp2geojson/shp.js'></script>
@@ -58,6 +61,10 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/shp2geojson/jszip-utils.js'></script>
   <script src='./lib/shp2geojson/preprocess.js'></script>
   <script src='./lib/shp2geojson/preview.js'></script>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
 
   <style>
 
@@ -199,6 +206,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     </div>
 
     <div class='col overflow-auto'>
+    <div id="chartdiv"></div>
       <!-- REGISTER USER -->
       <section class='register-user content-register-user'>
         <h2>User Details</h2>
@@ -463,6 +471,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
               <p id='uploadStatusSHP' class='m-2'></p>
             </div>
             <hr />
+            <!-- Real-Time monitor-->
             <div class='content-real-time-monitor'>
               <h3><b>Upload New Real-Time Monitor Locations</b></h3>
               <p>FILE TYPE: <b>GeoJSON</b></p>
@@ -474,6 +483,27 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                 </div>
                 <p id='uploadStatusRealTimeGeoJSON' class='m-2'></p>
               </div>
+              <h3><b>Real-Time DB Urls</b></h3>
+              <div class='container'>
+              <div class='row'>
+                <div class='col'>
+                  <table id='clientSitesEditRealtimeDBTable' class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class='col-2'>Node</th>
+                        <th class='col-2'>DB Url</th>
+                        <th class='col-1'></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td contenteditable='true' class='text-black-50'>add new...</td>
+                        <td contenteditable='true' class='text-black-50'>add new...</td>
+                        <td data-bs-toggle='tooltip' data-bs-placement='top' title='Save New Site' class='col-2 text-center'><a href="javascript:saveRow('real_time_db', 'clientSitesEditRealtimeDBTable')"><i class="bi me-2 bi-file-earmark-plus"></i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               <hr />
             </div>
 
@@ -594,6 +624,13 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                     Monitoring
                   </a>
                   <ul id='siteMonitorList' class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarMonitorMenu">
+                  </ul>
+                </li>
+                <li class="nav-item dropdown content-real-time-monitor">
+                  <a class="nav-link dropdown-toggle" id="navbarRealTimeMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Real-Time
+                  </a>
+                  <ul id='siteRealTimeList' class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarRealTimeMenu">
                   </ul>
                 </li>
               </ul>
@@ -784,7 +821,9 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script>
     firebaseCheckUser();
   </script>
-
+<script>
+    drawChart();
+  </script>
 </body>
 
 </html>

@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.30
+2023-02-16
+* Preparations to Firebase DB to add Live data from Element Air Sensors
+
 Version 1.26
 2023-02-06
 * Removed PostgresSQL read from default tables
