@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.31
+2023-02-17
+* Added line charts to client section - 1 Test site only
+
 Version 1.30
 2023-02-16
 * Preparations to Firebase DB to add Live data from Element Air Sensors

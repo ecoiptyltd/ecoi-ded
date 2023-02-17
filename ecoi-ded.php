@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/charts.css" rel="stylesheet" type="text/css">
 
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet' />
@@ -61,9 +62,10 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/shp2geojson/jszip-utils.js'></script>
   <script src='./lib/shp2geojson/preprocess.js'></script>
   <script src='./lib/shp2geojson/preview.js'></script>
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src='./lib/amcharts5/index.js'></script>
+  <script src='./lib/amcharts5/xy.js'></script>
+  <script src='./lib/amcharts5/radar.js'></script>
+  <script src='./lib/amcharts5/themes/Animated.js'></script>
 
 
   <style>
@@ -206,7 +208,6 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     </div>
 
     <div class='col overflow-auto'>
-    <div id="chartdiv"></div>
       <!-- REGISTER USER -->
       <section class='register-user content-register-user'>
         <h2>User Details</h2>
@@ -639,6 +640,17 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         </nav>
 
         <div id='siteMap'></div>
+        <div class='content-dashboard'>
+          <div id='chartWsLine' class='chart-ws-line'></div>
+          <div id='chartPm25Line' class='chart-pm25-line'></div>
+          <div id='chartPm10Line' class='chart-pm10-line'></div>
+          <div id='chartRhLine' class='chart-rh-line'></div>
+          <div id='chartTempLine' class='chart-temp-line'></div>
+          <div id='chartCo2Line' class='chart-co2-line'></div>
+          <div id='chartTvocLine' class='chart-tvoc-line'></div>
+          
+          
+        </div>
 
         <div class='content-view-doc-table content-client'>
           <h2 id='docTypeName' class='' style='margin-top: 1%'></h2>
@@ -808,7 +820,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
           </div>
         </div>
       </div>
-
+      
   </main>
   <footer>
 
@@ -821,8 +833,14 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script>
     firebaseCheckUser();
   </script>
-<script>
-    drawChart();
+  <script>
+    drawChart('chartPm25Line', 'pm2.5', 40, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04'); // drawChart(div ID, Pollutant, Target Level, dbUrl)
+    drawChart('chartPm10Line', 'pm10', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawChart('chartTempLine', 'temp', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawChart('chartRhLine', 'rh', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawChart('chartCo2Line', 'co2', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawChart('chartTvocLine', 'tvoc', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawChart('chartWsLine', 'ws', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
   </script>
 </body>
 
