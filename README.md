@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 1.32
+2023-02-20
+* Preparations for wind rose 
+
 Version 1.31
 2023-02-17
 * Added line charts to client section - 1 Test site only

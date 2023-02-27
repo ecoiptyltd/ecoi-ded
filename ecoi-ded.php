@@ -55,6 +55,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/moment-with-locales.js'></script>
   <script src='./lib/real-time.js'></script>
   <script src='./lib/charts/line-chart-live.js'></script>
+  <script src='./lib/charts/wind-dir.js'></script>
   <script src='./lib/jquery-3.6.0.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js'></script>
   <script src='./lib/shp2geojson/shp.js'></script>
@@ -485,6 +486,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                 <p id='uploadStatusRealTimeGeoJSON' class='m-2'></p>
               </div>
               <h3><b>Real-Time DB Urls</b></h3>
+              <p><b>Start Direction<b> and <b>End Direction</b> is the cardinal direction, in °, in a clockwise direction that the site start and ends from the monitoring station</p>
               <div class='container'>
               <div class='row'>
                 <div class='col'>
@@ -493,11 +495,15 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                       <tr>
                         <th class='col-2'>Node</th>
                         <th class='col-2'>DB Url</th>
+                        <th class='col-1'>Start Direction</th>
+                        <th class='col-1'>End Direction</th>
                         <th class='col-1'></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td contenteditable='true' class='text-black-50'>add new...</td>
+                        <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td data-bs-toggle='tooltip' data-bs-placement='top' title='Save New Site' class='col-2 text-center'><a href="javascript:saveRow('real_time_db', 'clientSitesEditRealtimeDBTable')"><i class="bi me-2 bi-file-earmark-plus"></i></a></td>
@@ -642,6 +648,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         <div id='siteMap'></div>
         <div class='content-dashboard'>
           <div id='chartWsLine' class='chart-ws-line'></div>
+          <div id='chartWdDir2' class='chart-wd-gauge'></div>
           <div id='chartPm25Line' class='chart-pm25-line'></div>
           <div id='chartPm10Line' class='chart-pm10-line'></div>
           <div id='chartRhLine' class='chart-rh-line'></div>
@@ -820,7 +827,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
           </div>
         </div>
       </div>
-      
+      <div id='chartWdDir' class='chart-wd-gauge'></div>
   </main>
   <footer>
 
@@ -834,13 +841,14 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     firebaseCheckUser();
   </script>
   <script>
-    drawChart('chartPm25Line', 'pm2.5', 40, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04'); // drawChart(div ID, Pollutant, Target Level, dbUrl)
-    drawChart('chartPm10Line', 'pm10', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawChart('chartTempLine', 'temp', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawChart('chartRhLine', 'rh', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawChart('chartCo2Line', 'co2', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawChart('chartTvocLine', 'tvoc', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    // drawChart('chartPm25Line', 'pm2.5', 40, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04'); // drawChart(div ID, Pollutant, Target Level, dbUrl)
+    // drawChart('chartPm10Line', 'pm10', 75, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    // drawChart('chartTempLine', 'temp', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    // drawChart('chartRhLine', 'rh', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    // drawChart('chartCo2Line', 'co2', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    // drawChart('chartTvocLine', 'tvoc', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
     drawChart('chartWsLine', 'ws', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    drawWindDir('chartWdDir', 270, 330, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04') //drawWindDir(id, siteDirStart, siteDirEnd, dbUrl)
   </script>
 </body>
 
