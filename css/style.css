@@ -129,6 +129,7 @@ button:hover {
 .content-view-site,
 .content-view-doc-table,
 .content-view-pdf-preview,
-.content-real-time-monitor {
+.content-real-time-monitor,
+.content-dashboard {
     display: none;
 }

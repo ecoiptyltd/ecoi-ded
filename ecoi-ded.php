@@ -609,7 +609,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
       </section>
 
       <!-- VIEW SITE -->
-      <section class='view-site content-view-site content-client'>
+      <section id='clientSite' class='view-site content-view-site content-client'>
         <!-- Site NavBar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
@@ -646,17 +646,17 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         </nav>
 
         <div id='siteMap'></div>
-        <div class='content-dashboard'>
-          <div id='chartWsLine' class='chart-ws-line'></div>
-          <div id='chartWdDir2' class='chart-wd-gauge'></div>
+        <div id='dashboard' class='content-dashboard'>
+          <div class='row'>
+            <div id='chartWdDir' class='chart-wd-gauge col-4'></div>
+            <div id='chartWsLine' class='chart-ws-line col-8'></div>
+          </div>
           <div id='chartPm25Line' class='chart-pm25-line'></div>
           <div id='chartPm10Line' class='chart-pm10-line'></div>
           <div id='chartRhLine' class='chart-rh-line'></div>
           <div id='chartTempLine' class='chart-temp-line'></div>
           <div id='chartCo2Line' class='chart-co2-line'></div>
           <div id='chartTvocLine' class='chart-tvoc-line'></div>
-          
-          
         </div>
 
         <div class='content-view-doc-table content-client'>
@@ -827,7 +827,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
           </div>
         </div>
       </div>
-      <div id='chartWdDir' class='chart-wd-gauge'></div>
+
   </main>
   <footer>
 
@@ -847,8 +847,8 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
     // drawChart('chartRhLine', 'rh', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
     // drawChart('chartCo2Line', 'co2', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
     // drawChart('chartTvocLine', 'tvoc', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawChart('chartWsLine', 'ws', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
-    drawWindDir('chartWdDir', 270, 330, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04') //drawWindDir(id, siteDirStart, siteDirEnd, dbUrl)
+    //drawChart('chartWsLine', 'ws', 0, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04');
+    //drawWindDir('chartWdDir', 270, 330, 'http://18.156.194.8:5984/isibonelo-nxc0036-node04') //drawWindDir(id, siteDirStart, siteDirEnd, dbUrl)
   </script>
 </body>
 
