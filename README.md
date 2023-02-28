@@ -2,7 +2,12 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.01
+2023-02-28
+* HTTPS couchdb test
+
 Version 2.00
+2023-02-27
 * Added Realtime Line Charts for PM10, PM2.5, Temperature, Relative Humidity, CO2, TVOC, Wind Speed
 * Added Wind Direction Guage
 
