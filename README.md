@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.02
+2023-03-01
+* HTTPS server change
+
 Version 2.01
 2023-02-28
 * HTTPS couchdb test
