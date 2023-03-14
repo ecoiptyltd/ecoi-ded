@@ -55,6 +55,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/moment-with-locales.js'></script>
   <script src='./lib/real-time.js'></script>
   <script src='./lib/charts/line-chart-live.js'></script>
+  <script src='./lib/charts/line-chart-hourly.js'></script>
   <script src='./lib/charts/wind-dir.js'></script>
   <script src='./lib/jquery-3.6.0.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js'></script>
@@ -67,6 +68,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src='./lib/amcharts5/xy.js'></script>
   <script src='./lib/amcharts5/radar.js'></script>
   <script src='./lib/amcharts5/themes/Animated.js'></script>
+  <script src='./lib/amcharts5/stock.js'></script>
 
 
   <style>
@@ -651,6 +653,12 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
             <div id='chartWdDir' class='chart-wd-gauge col-4'></div>
             <div id='chartWsLine' class='chart-ws-line col-8'></div>
           </div>
+          <h2>Rolling Hourly Average</h2>
+          <div class='row'>
+            <div id='chartPm25LineHr' class='chart-pm25-line-hr'></div>
+            <div id='chartPm10LineHr' class='chart-pm10-line-hr'></div>
+          </div>
+          <h2>Real-Time</h2>
           <div id='chartPm25Line' class='chart-pm25-line'></div>
           <div id='chartPm10Line' class='chart-pm10-line'></div>
           <div id='chartRhLine' class='chart-rh-line'></div>

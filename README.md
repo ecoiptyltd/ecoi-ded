@@ -2,6 +2,11 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.03
+2023-03-14
+* Hourly average charts added
+* AMcharts 5 licence added
+
 Version 2.02
 2023-03-01
 * HTTPS server change
