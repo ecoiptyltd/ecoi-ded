@@ -9,14 +9,14 @@
         },
         "properties": {
             "Name": "Node 01",
-            "Status": "Active"
+            "Status": "Disabled"
         }
     }, {
         "type": "Feature",
         "id": 2,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.25261849900005, -26.306221799999946]
+            "coordinates": [29.29501, -26.34383]
         },
         "properties": {
             "Name": "Node 02",
@@ -27,7 +27,7 @@
         "id": 3,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.273914304000073, -26.314227739999978]
+            "coordinates": [29.29178, -26.33668]
         },
         "properties": {
             "Name": "Node 03",
@@ -38,7 +38,7 @@
         "id": 4,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.290339937000056, -26.344264768999949]
+            "coordinates": [29.305263, -26.353862]
         },
         "properties": {
             "Name": "Node 04",
@@ -49,7 +49,7 @@
         "id": 5,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.254367038000055, -26.329335926999931]
+            "coordinates": [29.25424, -26.325405]
         },
         "properties": {
             "Name": "Node 05",
@@ -60,22 +60,22 @@
         "id": 6,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.232658000000072, -26.442877999999951]
+            "coordinates": [29.2451, -26.319752]
         },
         "properties": {
             "Name": "Node 06",
-            "Status": "Disabled"
+            "Status": "Active"
         }
     }, {
         "type": "Feature",
         "id": 7,
         "geometry": {
             "type": "Point",
-            "coordinates": [29.212407000000042, -26.434557999999981]
+            "coordinates": [29.26251, -26.32660]
         },
         "properties": {
             "Name": "Node 07",
-            "Status": "Disabled"
+            "Status": "Active"
         }
     }, {
         "type": "Feature",

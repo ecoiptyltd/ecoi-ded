@@ -2,6 +2,11 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.04
+2023-03-16
+* Added LTE units
+* Filter data for irregular data
+
 Version 2.03
 2023-03-14
 * Hourly average charts added
