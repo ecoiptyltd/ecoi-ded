@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.06
+2023-06-09
+* Updated database url for reverse proxy to fix connection issues for some clients
+
 Version 2.05
 2023-03-17
 * Updated filter values to filter lte data better for outliers
