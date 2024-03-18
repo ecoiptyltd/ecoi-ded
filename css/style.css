@@ -1,0 +1,135 @@
+body,
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Manrope', sans-serif;
+}
+
+hr {
+    margin: 2%;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+p {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: medium;
+    font-weight: 200;
+}
+
+a:hover {
+    font-size: large;
+    color: black;
+}
+
+button {
+    padding: 7px 10px;
+    margin: 0 1%;
+    font-family: 'Manrope', sans-serif;
+    border-radius: 2px;
+    border: 0;
+    background-color: #609FD8;
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: whitesmoke;
+    color: #609FD8;
+    border: 1px solid #609FD8;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    padding: 1% 1%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.nav-links {
+    flex-basis: 70%;
+}
+
+.nav-links ul {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.logo-slogan {
+    flex-basis: 30%;
+}
+
+.logo-slogan h1{
+    margin-top: 0px;
+    padding-top: 0px;
+    
+    
+}
+
+.align_right {
+    text-align: right;
+}
+
+.selected-page {
+    color: #609FD8;
+    font-weight: 600;
+}
+
+.defaultContent {
+    display: block;
+}
+
+.content-user,
+.content-admin,
+.content-client,
+.content-register-user,
+.content-register-client,
+.content-admin-section,
+.content-admin-client-section,
+.content-default-settings,
+.content-client-edit,
+.content-client-edit-list,
+.content-clients-list,
+.content-client-edit-site,
+.content-user-edit,
+.content-view-client,
+.content-view-site,
+.content-view-doc-table,
+.content-view-pdf-preview,
+.content-real-time-monitor,
+.content-dashboard {
+    display: none;
+}

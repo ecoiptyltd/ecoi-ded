@@ -1,0 +1,48 @@
+.chart-pm25-line-hr {
+    width: 49%;
+    height: 300px;
+}
+
+.chart-pm10-line-hr {
+    width: 49%;
+    height: 300px;
+}
+
+.chart-pm25-line {
+    width: 100%;
+    height: 400px;
+}
+
+.chart-pm10-line {
+    width: 100%;
+    height: 400px;
+}
+
+.chart-temp-line {
+    width: 100%;
+    height: 400px;
+}
+
+.chart-rh-line {
+    width: 100%;
+    height: 400px;
+}
+
+.chart-co2-line {
+    width: 100%;
+    height: 400px;
+}
+
+.chart-tvoc-line {
+    width: 100%;
+    height: 400px;
+}
+.chart-ws-line {
+    width: 70%;
+    height: 400px;
+}
+
+.chart-wd-gauge {
+    width: 30%;
+    height: 400px;
+}

@@ -1,0 +1,114 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "id": 1,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.286766184000044, -26.353044636999982]
+        },
+        "properties": {
+            "Name": "Node 01",
+            "Status": "Disabled"
+        }
+    }, {
+        "type": "Feature",
+        "id": 2,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.29501, -26.34383]
+        },
+        "properties": {
+            "Name": "Node 02",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 3,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.29178, -26.33668]
+        },
+        "properties": {
+            "Name": "Node 03",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 4,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.305263, -26.353862]
+        },
+        "properties": {
+            "Name": "Node 04",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 5,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.25424, -26.325405]
+        },
+        "properties": {
+            "Name": "Node 05",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 6,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.2451, -26.319752]
+        },
+        "properties": {
+            "Name": "Node 06",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 7,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.26251, -26.32660]
+        },
+        "properties": {
+            "Name": "Node 07",
+            "Status": "Active"
+        }
+    }, {
+        "type": "Feature",
+        "id": 8,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.267375576000063, -26.325161566999952]
+        },
+        "properties": {
+            "Name": "Node 08",
+            "Status": "Disabled"
+        }
+    }, {
+        "type": "Feature",
+        "id": 9,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.26659257700004, -26.325577534999979]
+        },
+        "properties": {
+            "Name": "Node 09",
+            "Status": "Disabled"
+        }
+    }, {
+        "type": "Feature",
+        "id": 10,
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.240236000000039, -26.428328999999962]
+        },
+        "properties": {
+            "Name": "Node 10",
+            "Status": "Disabled"
+        }
+    }]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eco-i - Actionable Inteligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Actionable Inteligence. Driving Better Management Decision Making">
+
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <script src='./lib/view.js'></script>
+    <script src='./lib/main.js'></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 10%; bottom: 5%; left: 10%; width: 80%;}
+    </style>
+  
+</head>
+
+<body>
+    
+    <header class='nav-bar'>
+        <div class='logo-slogan'>
+            <h1>Eco-i</h1>
+            <h2>Actionable Inteligence</h2>
+        </div>
+        <section class='nav-links'>
+            <ul>
+                <li><a href='./index.html' class='selected-page'>Home</a></li>
+                <li><a href='./mining.html'>Mining</a></li>
+                <li><a href='./agriculture.html'>Agriculture</a></li>
+                <li><a href='./login.html' class='content-default'>Login</a></li>
+                <li><a href='#' onclick='logout()' class='content-user'>Logout</a></li>
+                <li><a href='#' class='content-user'>My Account</a></li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section>
+            <p>Please login to use the dashboard</p>
+        </section>
+        
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <!-- Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="./lib/init-firebase.js"></script>
+    <script>
+        firebaseCheckUser();
+    </script>
+ 
+</body>
+
+</html>
