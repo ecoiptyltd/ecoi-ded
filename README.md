@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.09
+2024-03-19
+* Modified Wind Direction chart to use CouchDB timestamp_data view
+
 Version 2.08
 2024-03-19
 * Added version number in navigation section
