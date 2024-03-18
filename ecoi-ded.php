@@ -149,6 +149,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
       <br>
       <span class='s-text'><b>Actionable Inteligence</b></span>
       <span class='s-text'>Driving Better Management Decision Making</span>
+      <span class='xs-text'>v2.07</span>
       <hr>
       <p><b>Welcome: </b><span id='navUserName'></span></p>
       <p><b>UID: </b><span id='navUID'></span></p>

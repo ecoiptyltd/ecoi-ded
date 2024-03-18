@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.08
+2024-03-19
+* Added version number in navigation section
+
 Version 2.07
 2024-03-18
 * Modified chart to use new CouchDB timestamp_data view
