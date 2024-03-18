@@ -2,6 +2,10 @@
 Eco-i - Digital Element Dashboard
 Version History
 
+Version 2.07
+2024-03-18
+* Modified chart to use new CouchDB timestamp_data view
+
 Version 2.06
 2023-06-09
 * Updated database url for reverse proxy to fix connection issues for some clients

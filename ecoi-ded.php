@@ -499,11 +499,13 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                         <th class='col-2'>DB Url</th>
                         <th class='col-1'>Start Direction</th>
                         <th class='col-1'>End Direction</th>
+                        <th class='col-1'>Install Date</th>
                         <th class='col-1'></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td contenteditable='true' class='text-black-50'>add new...</td>
                         <td contenteditable='true' class='text-black-50'>add new...</td>
@@ -653,11 +655,12 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
             <div id='chartWdDir' class='chart-wd-gauge col-4'></div>
             <div id='chartWsLine' class='chart-ws-line col-8'></div>
           </div>
-          <h2>Rolling Hourly Average</h2>
+          <!-- <h2>Rolling Hourly Average</h2>
           <div class='row'>
             <div id='chartPm25LineHr' class='chart-pm25-line-hr'></div>
             <div id='chartPm10LineHr' class='chart-pm10-line-hr'></div>
           </div>
+          -->
           <h2>Real-Time</h2>
           <div id='chartPm25Line' class='chart-pm25-line'></div>
           <div id='chartPm10Line' class='chart-pm10-line'></div>
